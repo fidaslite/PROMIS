@@ -12,8 +12,11 @@ const MainLayout: React.FC = () => {
     const path = location.pathname;
     if (path === '/') return 'Dashboard';
     if (path === '/masters/employees') return 'Employee Master';
-    if (path === '/masters/departments') return 'Departments';
-    if (path === '/masters/shifts') return 'Shift Settings';
+    if (path === '/masters/departments') return 'Department Master';
+    if (path == '/masters/designations') return 'Designation Master';
+    if (path === '/masters/shifts') return 'Shift Master';
+    if (path == '/masters/line') return 'Line Master';
+    if (path == '/masters/machine')return 'Machine Master';
     if (path === '/transactions/logs') return 'Activity Logs';
     return 'System Overview';
   };

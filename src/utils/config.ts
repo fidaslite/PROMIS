@@ -2,8 +2,11 @@ export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0
 
 export const ENDPOINTS = {
   EMPLOYEES: `${API_BASE_URL}/masters/employees`,
-  DEPARTMENTS: `${API_BASE_URL}/master/dept`,
-  DESIGNATION: `${API_BASE_URL}/master/designation`,
+  DEPARTMENTS: `${API_BASE_URL}/masters/departments`,
+  DESIGNATION: `${API_BASE_URL}/masters/designation`,
+  SHIFT : `${API_BASE_URL}/masters/shifts`,
+  LINE : `${API_BASE_URL}/masters/line`,
+  MACHINE :`${API_BASE_URL}/masters/machine`,
   TRANSACTIONS: `${API_BASE_URL}/transactions/daily`,
   MQTT_STATUS: `${API_BASE_URL}/settings/mqtt-status`,
 };

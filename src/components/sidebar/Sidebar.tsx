@@ -60,14 +60,35 @@ const Sidebar: React.FC = () => {
                 className={`block p-2 pl-4 text-xs transition-colors
                 ${location.pathname === "/masters/departments" ? "text-blue-400 font-medium" : "hover:text-white"}`}
               >
-                Departments
+                Department Master
+              </Link>
+              <Link 
+                to="/masters/designations" 
+                className={`block p-2 pl-4 text-xs transition-colors
+                ${location.pathname === "/masters/designations" ? "text-blue-400 font-medium" : "hover:text-white"}`}
+              >
+                Designation Master
               </Link>
               <Link 
                 to="/masters/shifts" 
                 className={`block p-2 pl-4 text-xs transition-colors
                 ${location.pathname === "/masters/shifts" ? "text-blue-400 font-medium" : "hover:text-white"}`}
               >
-                Shift Settings
+                Shift Master
+              </Link>
+              <Link 
+                to="/masters/line" 
+                className={`block p-2 pl-4 text-xs transition-colors
+                ${location.pathname === "/masters/line" ? "text-blue-400 font-medium" : "hover:text-white"}`}
+              >
+                Line Master
+              </Link>
+              <Link 
+                to="/masters/machine" 
+                className={`block p-2 pl-4 text-xs transition-colors
+                ${location.pathname === "/masters/machine" ? "text-blue-400 font-medium" : "hover:text-white"}`}
+              >
+                Machine Master
               </Link>
             </div>
           )}
