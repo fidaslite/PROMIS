@@ -3,23 +3,24 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import Sidebar from '../components/sidebar/Sidebar';
 import Header from '../components/header/Header';
+import { menuSections } from "../config/menuConfig";
 
 const MainLayout: React.FC = () => {
   const location = useLocation();
 
   // Function to determine header title based on path
-  const getHeaderTitle = () => {
-    const path = location.pathname;
-    if (path === '/') return 'Dashboard';
-    if (path === '/masters/employees') return 'Employee Master';
-    if (path === '/masters/departments') return 'Department Master';
-    if (path == '/masters/designations') return 'Designation Master';
-    if (path === '/masters/shifts') return 'Shift Master';
-    if (path == '/masters/line') return 'Line Master';
-    if (path == '/masters/machine')return 'Machine Master';
-    if (path === '/transactions/logs') return 'Activity Logs';
-    return 'System Overview';
-  };
+const getHeaderTitle = () => {
+
+  const allMenus = menuSections.flatMap(
+    (section) => section.menus
+  );
+
+  const currentMenu = allMenus.find(
+    (menu) => menu.path === location.pathname
+  );
+
+  return currentMenu?.name || "System Overview";
+};
 
   return (
     <div className="flex h-screen w-full overflow-hidden bg-gray-50 text-slate-900">

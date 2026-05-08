@@ -165,6 +165,7 @@ const EmployeeMaster: React.FC = () => {
               <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Employee Code *</label>
               <input 
                 type="text" 
+                placeholder="EMP001"
                 className="w-full bg-white border border-slate-200 rounded-lg p-2 text-sm outline-none focus:border-blue-500" 
                 value={formData.EmpCode}
                 onChange={(e) => setFormData({...formData, EmpCode: e.target.value})}
@@ -174,6 +175,7 @@ const EmployeeMaster: React.FC = () => {
               <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Full Name</label>
               <input 
                 type="text" 
+                placeholder="Prakash"
                 className="w-full bg-white border border-slate-200 rounded-lg p-2 text-sm outline-none focus:border-blue-500" 
                 value={formData.EmpName}
                 onChange={(e) => setFormData({...formData, EmpName: e.target.value})}
@@ -196,6 +198,7 @@ const EmployeeMaster: React.FC = () => {
               <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Contractor</label>
               <input 
                 type="text" 
+                placeholder="Internal"
                 className="w-full bg-white border border-slate-200 rounded-lg p-2 text-sm" 
                 value={formData.EmpContractor}
                 onChange={(e) => setFormData({...formData, EmpContractor: e.target.value})}
@@ -205,6 +208,7 @@ const EmployeeMaster: React.FC = () => {
               <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Username</label>
               <input 
                 type="text" 
+                placeholder="USER123"
                 className="w-full bg-white border border-slate-200 rounded-lg p-2 text-sm" 
                 value={formData.EmpUser}
                 onChange={(e) => setFormData({...formData, EmpUser: e.target.value})}
@@ -213,7 +217,8 @@ const EmployeeMaster: React.FC = () => {
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Password</label>
               <input 
-                type="text" // Changed from password to text as requested
+                type="text" 
+                placeholder="1234"
                 className="w-full bg-white border border-slate-200 rounded-lg p-2 text-sm" 
                 value={formData.EmpPass}
                 onChange={(e) => setFormData({...formData, EmpPass: e.target.value})}

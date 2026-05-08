@@ -147,12 +147,12 @@ const MachineMaster: React.FC = () => {
 
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-slate-500 uppercase">Machine Code *</label>
-              <input type="text" className="w-full bg-white border border-slate-200 rounded-lg p-2 h-[40px] text-sm outline-none focus:border-blue-500" value={formData.MachineCode} onChange={(e) => setFormData({...formData, MachineCode: e.target.value})} />
+              <input type="text" placeholder="M01" className="w-full bg-white border border-slate-200 rounded-lg p-2 h-[40px] text-sm outline-none focus:border-blue-500" value={formData.MachineCode} onChange={(e) => setFormData({...formData, MachineCode: e.target.value})} />
             </div>
 
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-slate-500 uppercase">Machine Name *</label>
-              <input type="text" className="w-full bg-white border border-slate-200 rounded-lg p-2 h-[40px] text-sm outline-none focus:border-blue-500" value={formData.MachineName} onChange={(e) => setFormData({...formData, MachineName: e.target.value})} />
+              <input type="text" placeholder="Machine 1" className="w-full bg-white border border-slate-200 rounded-lg p-2 h-[40px] text-sm outline-none focus:border-blue-500" value={formData.MachineName} onChange={(e) => setFormData({...formData, MachineName: e.target.value})} />
             </div>
 
             <div className="space-y-1">
@@ -185,7 +185,7 @@ const MachineMaster: React.FC = () => {
           <table className="w-full text-left">
             <thead>
               <tr className="border-b border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                <th className="px-4 py-3 text-center">S.No</th>
+                <th className="px-4 py-3 text-center">#</th>
                 <th className="px-6 py-3">Code</th>
                 <th className="px-6 py-3">Machine Name</th>
                 <th className="px-6 py-3">Line</th>
